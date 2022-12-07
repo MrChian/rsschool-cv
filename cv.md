@@ -33,7 +33,8 @@ Code examples are currently missing due to lack of practice, but will soon be ad
 ---
 
 ## Education:
-* Lesgaft National State University (graduation date 2023; 5th year student): boxing coach.
+Lesgaft National State University (graduation date 2023; 5th year student): boxing coach.
+
 ---
 
 ## Languages:
