@@ -1,0 +1,10 @@
+.rightside {
+    width: 200%;
+    color: rgb(0, 0, 0);
+    background-color: #b9b9b9b4;
+}
+header img {
+    margin-bottom: 20px;
+    border: 20px solid var(--dark-gray-color);
+    border-radius: 40%;
+}
