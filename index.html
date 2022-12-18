@@ -6,16 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MrChian's CV</title>
     <link rel="stylesheet" href="/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header class="header"></header>
-	<div class="container">
-		<div class="twosides">
-			<div class="rightside">
-				<header>
-					<img src="/Image/Untitled.png" alt="MrChian" width="316" height="287">
-					<h1>Artur Mkrtchian</h1>
-					<h2>Novice Frontend Developer</h2>
-				</header>
+	<header class="header№">
+		<div id="information">
+			<h1><span itemprop="name">Artur Mkrtchian</span></h1>
+			<h2><span itemprop="job">Junior Frontend Developer</span></h2>
+			<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+				<span itemprop="Locality">St. Petersburg</span>,
+				<span itemprop="Region">Leningrad region</span>,
+				<span itemprop="Country">Russia</span>
+			</small>
+			<small><span itemprop="email">mkrtchyanartur.msk@gmail.com</span></small>
+		</div>
+		<div id="picture">
+			<img src="/Image/Untitled.png" alt="MrChian" itemprop="image">
+		</div>
+		<div id="person" itemscope itemtype="http://schema.org/Person"></div>
+	</header>
+	<section id="skills" class="sksksk" itemscope itemtype="http://schema.org/ItemList">
+		<h2 itemprop="name">Skills</h2>
+		<section id="skills-right">
+			<h3 itemprop="about">Development</h3>
+			<ul>
+				<li itemprop="itemListElement">HTML5/CSS3</li>
+				<li itemprop="itemListElement">JavaScript</li>
+				<li itemprop="itemListElement">Git, GitHub</li>
+				<li itemprop="itemListElement">SQL Databases</li>
+				<li itemprop="itemListElement">VS Code</li>
+			</ul>
+		</section>
+	</section>
 </body>
 </html>
