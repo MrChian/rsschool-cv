@@ -11,33 +11,45 @@
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header class="header№">
-		<div id="information">
-			<h1><span itemprop="name">Artur Mkrtchian</span></h1>
-			<h2><span itemprop="job">Junior Frontend Developer</span></h2>
-			<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-				<span itemprop="Locality">St. Petersburg</span>,
-				<span itemprop="Region">Leningrad region</span>,
-				<span itemprop="Country">Russia</span>
-			</small>
-			<small><span itemprop="email">mkrtchyanartur.msk@gmail.com</span></small>
-		</div>
-		<div id="picture">
-			<img src="/Image/Untitled.png" alt="MrChian" itemprop="image">
-		</div>
-		<div id="person" itemscope itemtype="http://schema.org/Person"></div>
-	</header>
-	<section id="skills" class="sksksk" itemscope itemtype="http://schema.org/ItemList">
-		<h2 itemprop="name">Skills</h2>
-		<section id="skills-right">
-			<h3 itemprop="about">Development</h3>
-			<ul>
-				<li itemprop="itemListElement">HTML5/CSS3</li>
-				<li itemprop="itemListElement">JavaScript</li>
-				<li itemprop="itemListElement">Git, GitHub</li>
-				<li itemprop="itemListElement">VS Code</li>
-			</ul>
-		</section>
-	</section>
+	<div class="wrap">
+		<header class="header.menu">
+			<nav class="header.content">
+				<ul class="header.menu__list">
+					<li class="header.menu__item">
+						<a href="#about" class="header-menu__link">About me</a>
+					</li>
+					<li class="header.menu__item">
+						<a href="#code" class="header.menu__link">Code</a>
+					</li>
+					<li class="header.menu__item">
+						<a href="#skills" class="header.menu__link">Skills</a>
+					</li>
+					<li class="header.menu__item">
+						<a href="#contacts" class="header.menu__link">Contacts</a>
+					</li>
+					<li class="header.menu__item">
+						<a href="#languages" class="header.menu_link">Languages</a>
+					</li>
+					<li class="header.menu__item">
+						<a href="#education" class="header.menu_link">Education</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="information">
+				<h1><span itemprop="name">Artur Mkrtchian</span></h1>
+				<h2><span itemprop="job">Junior Frontend Developer</span></h2>
+				<small itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+					<span itemprop="Locality">St. Petersburg</span>,
+					<span itemprop="Region">Leningrad region</span>,
+					<span itemprop="Country">Russia</span>
+				</small>
+				<small><span itemprop="email">mkrtchyanartur.msk@gmail.com</span></small>
+				<small><span itemprop="phonenumber">+79992002213</span></small>
+			</div>
+			<div class="picture">
+				<img src="/Image/Untitled.png" alt="MrChian" itemprop="image">
+			</div>
+		</header>
+	</div>	
 </body>
 </html>
