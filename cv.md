@@ -27,3 +27,8 @@ At the moment, there are no code examples available due to a lack of practical e
 
 ---
 
+## Education:
+Lesgaft National State University (2018-2023) - Specialty: Training in a Chosen Sport (Boxing).
+
+---
+
