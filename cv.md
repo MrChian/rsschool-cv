@@ -21,3 +21,9 @@ Previously, I have worked as a supervisor in a steel mill and a police officer i
 * Visual Studio Code
 
 ---
+
+## Code Examples:
+At the moment, there are no code examples available due to a lack of practical experience, but they will be added to this section soon.
+
+---
+
