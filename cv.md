@@ -7,3 +7,11 @@
 * GitHub: [MrChian](https://github.com/MrChian)
 
 ---
+
+## About me:
+My main goal is to become a highly skilled programmer. To achieve this, I work hard and study in-depth the relevant training materials. I believe that diligence and persistence are important personal qualities for success.
+Previously, I have worked as a supervisor in a steel mill and a police officer in a special operations unit. Additionally, I have experience as a boxing coach, which has given me a broad understanding of different professional fields.
+
+---
+
+##
