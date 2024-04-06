@@ -32,3 +32,6 @@ Lesgaft National State University (2018-2023) - Specialty: Training in a Chosen 
 
 ---
 
+## Languages:
+* Russian
+* English B1
