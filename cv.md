@@ -14,4 +14,10 @@ Previously, I have worked as a supervisor in a steel mill and a police officer i
 
 ---
 
-##
+## Skills:
+* Git, GitHub
+* HTML, CSS
+* JavaScript
+* Visual Studio Code
+
+---
