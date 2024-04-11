@@ -1,0 +1,109 @@
+/* The normalization of the block model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Removing the internal margins on the left for the tags of lists that have the class attribute */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/* Removing the outer margins from the body and other two tags with the class attribute */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/* Removing the outer vertical margins for all necessary tags that have the "class" attribute */
+:where(
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl
+):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Removing the standard marker from the bulleted list that has the class attribute */
+:where(ul[class]) {
+    list-style: none;
+}
+
+/* Reset the vertical outer margins of the paragraph and declare a local variable for the outer margin to avoid interaction with more complex selectors */
+p {
+    --paragraphMarginBottom: 24px;
+    margin-block: 0;
+}
+
+/* The outer indentation is incorrect for a paragraph that does not have the class attribute and is not located last among its neighboring elements */
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+/* Making it easier to work with images */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inheriting the font styles for the input elements */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+/* It will be useful in most scenarios (for example, I need to scroll to the bottom of a page) */
+html {
+    height: 100%;
+/* Smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+/* Unified interlining */
+    line-height: 1.5;
+}
+
+/* Convert SVG elements to a single color */
+svg *[fill] { 
+    fill: currentColor 
+}
+svg *[stroke] { 
+    stroke: currentColor 
+}
+
+/* Addressing the issue of delayed color changes when interacting with SVG elements */
+svg * {
+    transition-property: fill, stroke;
+}
+
+/* Removing all animations and transitions for users who prefer not to have them */
+@media (prefers-reduced-motion: reduce) {
+* {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+}
+}
