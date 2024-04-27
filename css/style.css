@@ -17,18 +17,16 @@ body,
 }
 
 /* Removing the outer vertical margins for all necessary tags that have the "class" attribute */
-:where(
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-ul,
-ol,
-dl
-):where([class]) {
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
     margin-block: 0;
 }
 
@@ -75,22 +73,23 @@ button {
 /* It will be useful in most scenarios (for example, I need to scroll to the bottom of a page) */
 html {
     height: 100%;
-/* Smooth scrolling */
+    /* Smooth scrolling */
     scroll-behavior: smooth;
 }
 
 body {
     min-height: 100%;
-/* Unified interlining */
+    /* Unified interlining */
     line-height: 1.5;
 }
 
 /* Convert SVG elements to a single color */
-svg *[fill] { 
-    fill: currentColor 
+svg *[fill] {
+    fill: currentColor
 }
-svg *[stroke] { 
-    stroke: currentColor 
+
+svg *[stroke] {
+    stroke: currentColor
 }
 
 /* Addressing the issue of delayed color changes when interacting with SVG elements */
@@ -100,10 +99,97 @@ svg * {
 
 /* Removing all animations and transitions for users who prefer not to have them */
 @media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
 * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    margin: 0;
+    padding: 0;
+} 
+
+@font-face {
+    font-family: 'Steppe-Book';
+    src: url('../fonts/Steppe-Book.ttf');
 }
+
+@font-face {
+    font-family: 'Steppe-ExtraBold';
+    src: url('../fonts/Steppe-ExtraBold.ttf');
 }
+
+body {
+    background: linear-gradient(to bottom, #0337f47e, #6d2fe15e);
+    font-family: 'Steppe-Book', sans-serif;
+    color: white;
+}
+
+.header {
+    padding: 15px;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.header .wrapper {
+    display: flex;
+}
+
+.title {
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-left: 35px;
+    font-size: 20px;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    gap: 100px;
+}
+
+.nav-item a {
+    font-size: 16px;
+    line-height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-item a:hover {
+    border-bottom: 2px solid white;
+}
+
+.column-left {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    max-width: 250px;
+    margin-bottom: 15px;
+}
+
+.image img {
+    border-radius: 50px;
+}
+
+.contacts {
+    text-align: center;
+}
+
+li p {
+    margin: 0 auto;
+}
+
+.contacts-item {
+    margin-bottom: 15px;
+}
+
