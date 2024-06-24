@@ -106,6 +106,7 @@ svg * {
         scroll-behavior: auto !important;
     }
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -122,18 +123,21 @@ svg * {
 }
 
 body {
-    background: linear-gradient(to bottom, #0337f47e, #6d2fe15e);
+    background-color: #555963;
     font-family: 'Steppe-Book', sans-serif;
     color: white;
 }
 
 .header {
-    padding: 15px;
+    padding: 10px 0 10px 0;
+    background-color: #262932;
+    margin-bottom: 15px;
 }
 
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    display: flex;
 }
 
 
@@ -175,6 +179,7 @@ body {
 .image {
     max-width: 250px;
     margin-bottom: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
 }
 
 .image img {
@@ -193,3 +198,67 @@ li p {
     margin-bottom: 15px;
 }
 
+.column-right {
+    display: flex;
+	flex-direction: column;
+    margin: auto;
+}
+
+.column-right-title {
+    color: azure;
+}
+
+.section-title {
+    text-align: center;
+    margin: 16px 0px 16px 0px;
+}
+
+a {
+    color: azure;
+    text-decoration: none;
+}
+
+.about-title {
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    background-color: #262932;
+    color: #bdbec1;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    margin-top: 15px;
+}
+
+.git a {
+    display: flex;
+    align-items: center;
+}
+
+.git span {
+    color: #bdbec1;
+    margin-left: 0;
+}
+
+.git:hover span {
+    color: #e09866;
+}
+
+.copyright {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.rs-logo {
+    margin-top: 5px 5px 0 0;
+}
+
+.rs-logo img,
+.git img {
+    height: 40px;
+    width: auto;
+    opacity: 0.5;
+}

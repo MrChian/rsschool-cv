@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,21 @@
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header class="header">
         <div class="wrapper">
             <div class="title">curriculum vitae</div>
-                <nav class="nav">
-                    <ul class="nav-items">
-                        <li class="nav-item"><a href="#about">about</a></li>
-                        <li class="nav-item"><a href="#code">code</a></li>
-                        <li class="nav-item"><a href="#skills">skills</a></li>
-                        <li class="nav-item"><a href="#education">education</a></li>
-                        <li class="nav-item"><a href="#language">languages</a></li>
-                    </ul>
-                </nav>
+            <nav class="nav">
+                <ul class="nav-items">
+                    <li class="nav-item"><a href="#about">about</a></li>
+                    <li class="nav-item"><a href="#code">code</a></li>
+                    <li class="nav-item"><a href="#skills">skills</a></li>
+                    <li class="nav-item"><a href="#education">education</a></li>
+                    <li class="nav-item"><a href="#language">languages</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
     <main class="main">
@@ -30,7 +32,7 @@
                     <img src="images/MrChian.png" alt="MrChian">
                 </div>
                 <div class="contacts">
-                    <h2 class="contacts-title colored">contacts</h2>
+                    <h2 class="contacts-title colored">Contacts</h2>
                     <ul class="contacts-items text">
                         <li class="contacts-item">
                             <p>Location</p>
@@ -53,10 +55,112 @@
                             <p>MrChian#4731</p>
                         </li>
                     </ul>
-                </>
+                    </>
+                </div>
+                <div class="about">
+                    <h2 class="about-title colored">About</h2>
+                    <p class="about-items text">My main goal is to become a highly skilled programmer. To achieve this,
+                        I work hard and study in-depth the relevant training materials. I believe that diligence and
+                        persistence are important personal qualities for success.</p>
+                        <hr class="line">
+                    <p class="about-items text">Previously, I have worked as a supervisor in a steel mill and a police officer in a special
+                        operations unit. Additionally, I have experience as a boxing coach, which has given me a broad
+                        understanding of different professional fields.</p>
+                </div>
+            </div>
+            <div class="column-right">
+                <section class="column-right-title">
+                    <h1>Mkrtchian Artur</h1>
+                    <p class="subtitle">(Beginner)Front-End Developer</p>
+                </section>
+                <section class="code">
+                    <h2 class="section-title">Code Example</h2>
+                    <div class="code-sample">
+                        <pre>
+                            class Calculator
+                            def evaluate(string)
+                              [' + ', ' - ', ' * ', ' / '].each do |op|
+                                if string.include?(op)
+                                return string.split(op).map { |s| evaluate(s) }.inject(op.strip)
+                                end
+                            end
+                            string.to_f
+                            end
+                        end 
+                        </pre>
+                    </div>
+                </section>
+                <section class="education">
+                    <h2 class="section-title">Education</h2>
+                    <ul class="education-list">
+                        <li class="education-item">
+                            <p><a href="http://lesgaft.spb.ru/">Lesgaft National State University</a></p>
+                            <p>2018 &#8209; 2023</p>
+                            <span>Specialization: Physical education and sports teacher, boxing coach</span>
+                        </li>
+                        <li class="education-item">
+                            <p><a href="https://code-basics.com/ru">Code-basics</a></p>
+                            <p>12.2022</p>
+                            <span>Interactive HTML, CSS, and JavaScript courses</span>
+                        </li>
+                        <li class="education-item">
+                            <p><a href="https://web.dev/learn?hl=ru">Web.dev</a></p>
+                            <p>06.2024</p>
+                            <span>Web development courses</span>
+                        </li>
+                    </ul>
+                </section>
+                <section class="skills" id="skills">
+                    <h2 class="section-title">Skills</h2>
+                    <ul class="skills-list">
+                        <li class="skills-item">
+                            <p>HTML</p>
+                            <progress max="100" value="70"></progress>
+                        </li>
+                        <li class="skills-item">
+                            <p>CSS</p>
+                            <progress max="100" value="60"></progress>
+                        </li>
+                        <li class="skills-item">
+                            <p>JS</p>
+                            <progress max="100" value="50"></progress>
+                        </li>
+                        <li class="skills-item">
+                            <p>Bootstrap</p>
+                            <progress max="100" value="60"></progress>
+                        </li>
+                        <li class="skills-item">
+                            <p>Git</p>
+                            <progress max="100" value="70"></progress>
+                        </li>
+                    </ul>
+                </section>
+                <section class="language" id="language">
+                    <h2 class="section-title">Languages</h2>
+                    <ul class="language-list">
+                        <li class="language-item">
+                            <p>Russian &#8209; Native speaker</p>
+                        </li>
+                        <li class="language__item">
+                            <p>English &#8209; B1 (Intermediate)</p>
+                        </li>
+                    </ul>
+                </section>
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="git">
+                <a href="https://github.com/MrChian"><img src="images/gitlogo.svg"
+                        alt="GitHub link" /><span>GitHub</span></a>
+            </div>
+            <div class="copyright">©2024 MrChian</div>
+            <div class="rs-logo">
+                <a href="https://rs.school/courses/javascript-preschool-ru"><img src="images/logo.svg" alt="rs school"></a>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
