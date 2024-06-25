@@ -135,7 +135,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: flex;
 }
@@ -148,7 +148,7 @@ body {
 .title {
     margin: 0 auto;
     vertical-align: bottom;
-    margin-left: 35px;
+    margin-left: 0;
     font-size: 18px;
 }
 
@@ -156,7 +156,6 @@ body {
     display: flex;
     list-style: none;
     gap: 50px;
-    padding-right: 70px;
 }
 
 .nav-item a {
@@ -182,6 +181,7 @@ body {
     margin-bottom: 15px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
     border-radius: 50px;
+    margin-left: 0;
 }
 
 .image img {
@@ -239,6 +239,25 @@ a {
     font-size: 14px;
 }
 
+.skills {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
 .footer {
     width: 100%;
     align-items: center;
