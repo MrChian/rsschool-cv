@@ -135,7 +135,7 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     display: flex;
 }
@@ -149,17 +149,18 @@ body {
     margin: 0 auto;
     vertical-align: bottom;
     margin-left: 35px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .nav-items {
     display: flex;
     list-style: none;
-    gap: 100px;
+    gap: 50px;
+    padding-right: 70px;
 }
 
 .nav-item a {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 100%;
     text-decoration: none;
     cursor: pointer;
@@ -188,8 +189,14 @@ body {
 }
 
 .contacts {
+    text-align: left;
+}
+
+.contacts-title {
+    font-size: 18px;
     text-align: center;
 }
+
 
 li p {
     margin: 0 auto;
@@ -197,6 +204,7 @@ li p {
 
 .contacts-item {
     margin-bottom: 15px;
+    font-size: 14px;
 }
 
 .column-right {
@@ -208,20 +216,27 @@ li p {
 .column-right-title {
     color: #262932;
     text-align: center;
+    font-size: 18px;
 }
 
 .section-title {
     text-align: center;
     margin: 16px 0px 16px 0px;
+    font-size: 18px;
 }
 
 a {
-    color: azure;
+    color: #262932;
     text-decoration: none;
 }
 
 .about-title {
     text-align: center;
+    font-size: 18px;
+}
+
+.text {
+    font-size: 14px;
 }
 
 .footer {
