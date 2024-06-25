@@ -262,3 +262,29 @@ a {
     width: auto;
     opacity: 0.5;
 }
+
+/* Стили для прогресс-бара */
+progress {
+    width: 100%;
+    height: 20px;
+    appearance: none; /* Убираем стандартный стиль */
+}
+
+/* Стили для фона прогресс-бара (Webkit-браузеры: Chrome, Safari, Opera) */
+progress::-webkit-progress-bar {
+    background-color: #ccc; /* Цвет фона прогресс-бара */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden;
+}
+
+/* Стили для заполненной части прогресс-бара (Webkit-браузеры: Chrome, Safari, Opera) */
+progress::-webkit-progress-value {
+    background-color: rgba(0, 0, 255, .2); /* Цвет заполненной части прогресс-бара */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+/* Стили для заполненной части прогресс-бара (Firefox) */
+progress::-moz-progress-bar {
+    background-color: rgba(0, 0, 255, .2); /* Цвет заполненной части прогресс-бара */
+    border-radius: 10px; /* Закругленные углы */
+}
