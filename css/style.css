@@ -167,7 +167,7 @@ body {
 }
 
 .nav-item a:hover {
-    border-bottom: 2px solid white;
+    color: #e09866;
 }
 
 .column-left {
@@ -207,6 +207,10 @@ li p {
     font-size: 14px;
 }
 
+.contacts-item a:hover {
+    color: #e09866;
+}
+
 .column-right {
     display: flex;
 	flex-direction: column;
@@ -233,6 +237,10 @@ a {
 .about-title {
     text-align: center;
     font-size: 18px;
+}
+
+.education-item a:hover {
+    color: #e09866;
 }
 
 .text {
