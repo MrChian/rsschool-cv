@@ -239,6 +239,12 @@ a {
     font-size: 18px;
 }
 
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 .education-item a:hover {
     color: #e09866;
 }
