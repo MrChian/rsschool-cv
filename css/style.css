@@ -1,4 +1,3 @@
-/* The normalization of the block model */
 *,
 *::before,
 *::after {
@@ -362,10 +361,6 @@ a {
 .copyright {
     margin: 0 auto;
     margin-top: 10px;
-}
-
-.rs-logo {
-    margin-top: 5px 5px 0 0;
 }
 
 .rs-logo img,
