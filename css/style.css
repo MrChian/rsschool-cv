@@ -142,6 +142,7 @@ body {
     padding: 10px 0 10px 0;
     background-color: #262932;
     margin-bottom: 15px;
+    margin: 0 auto;
 }
 
 .wrapper {
@@ -201,8 +202,10 @@ body {
     }
     
     .header .wrapper {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
+        width: 100%;
     }
 
     .nav-items {
@@ -219,6 +222,13 @@ body {
 
     .burger-menu {
         display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .column-left, .column-right {
+        width: 100%;
+        padding: 0 10px;
     }
 }
 
