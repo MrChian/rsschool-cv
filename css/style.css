@@ -1,0 +1,402 @@
+/* The normalization of the block model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Removing the internal margins on the left for the tags of lists that have the class attribute */
+:where(ul, ol):where([class]) {
+    padding-left: 0;
+}
+
+/* Removing the outer margins from the body and other two tags with the class attribute */
+body,
+:where(blockquote, figure):where([class]) {
+    margin: 0;
+}
+
+/* Removing the outer vertical margins for all necessary tags that have the "class" attribute */
+:where(h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl):where([class]) {
+    margin-block: 0;
+}
+
+:where(dd[class]) {
+    margin-left: 0;
+}
+
+:where(fieldset[class]) {
+    margin-left: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Removing the standard marker from the bulleted list that has the class attribute */
+:where(ul[class]) {
+    list-style: none;
+}
+
+/* Reset the vertical outer margins of the paragraph and declare a local variable for the outer margin to avoid interaction with more complex selectors */
+p {
+    --paragraphMarginBottom: 24px;
+    margin-block: 0;
+}
+
+/* The outer indentation is incorrect for a paragraph that does not have the class attribute and is not located last among its neighboring elements */
+p:where(:not([class]):not(:last-child)) {
+    margin-bottom: var(--paragraphMarginBottom);
+}
+
+/* Making it easier to work with images */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inheriting the font styles for the input elements */
+input,
+textarea,
+select,
+button {
+    font: inherit;
+}
+
+/* It will be useful in most scenarios (for example, I need to scroll to the bottom of a page) */
+html {
+    height: 100%;
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100%;
+    /* Unified interlining */
+    line-height: 1.5;
+}
+
+/* Convert SVG elements to a single color */
+svg *[fill] {
+    fill: currentColor
+}
+
+svg *[stroke] {
+    stroke: currentColor
+}
+
+/* Addressing the issue of delayed color changes when interacting with SVG elements */
+svg * {
+    transition-property: fill, stroke;
+}
+
+/* Removing all animations and transitions for users who prefer not to have them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+} 
+
+@font-face {
+    font-family: 'Steppe-Book';
+    src: url('../fonts/Steppe-Book.ttf');
+}
+
+@font-face {
+    font-family: 'Steppe-ExtraBold';
+    src: url('../fonts/Steppe-ExtraBold.ttf');
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body {
+    background-color: #555963;
+    font-family: 'Steppe-Book', sans-serif;
+    color: white;
+}
+
+.header {
+    padding: 10px 0 10px 0;
+    background-color: #262932;
+    margin-bottom: 15px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.header .wrapper {
+    display: flex;
+}
+
+.title {
+    margin: 0 auto;
+    vertical-align: bottom;
+    margin-left: 0;
+    font-size: 18px;
+}
+
+.header .burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.header .burger-menu div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    gap: 50px;
+}
+
+.nav-item a {
+    font-size: 14px;
+    line-height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-item a:hover {
+    color: #e09866;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header .wrapper {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .nav-items {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-items.active {
+        display: flex;
+    }
+
+    .burger-menu {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .column-left, .column-right {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
+.column-left {
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image {
+    max-width: 250px;
+    margin-bottom: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+    border-radius: 50px;
+    margin-left: 0;
+}
+
+.image img {
+    border-radius: 50px;
+}
+
+.contacts {
+    text-align: left;
+}
+
+.contacts-title {
+    font-size: 18px;
+    text-align: center;
+}
+
+
+li p {
+    margin: 0 auto;
+}
+
+.contacts-item {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.contacts-item a:hover {
+    color: #e09866;
+}
+
+.column-right {
+    display: flex;
+	flex-direction: column;
+    margin: auto;
+}
+
+.column-right-title {
+    color: #262932;
+    text-align: center;
+    font-size: 18px;
+}
+
+.section-title {
+    text-align: center;
+    margin: 16px 0px 16px 0px;
+    font-size: 18px;
+}
+
+a {
+    color: #262932;
+    text-decoration: none;
+}
+
+.about-title {
+    text-align: center;
+    font-size: 18px;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-item a:hover {
+    color: #e09866;
+}
+
+.text {
+    font-size: 14px;
+}
+
+.skills {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+.footer {
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    background-color: #262932;
+    color: #bdbec1;
+    justify-content: space-between;
+    padding: 10px 0 10px 0;
+    margin-top: 15px;
+}
+
+.git a {
+    display: flex;
+    align-items: center;
+}
+
+.git span {
+    color: #bdbec1;
+    margin-left: 0;
+}
+
+.git:hover span {
+    color: #e09866;
+}
+
+.copyright {
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.rs-logo {
+    margin-top: 5px 5px 0 0;
+}
+
+.rs-logo img,
+.git img {
+    height: 40px;
+    width: auto;
+    opacity: 0.5;
+}
+
+/* Стили для прогресс-бара */
+progress {
+    width: 100%;
+    height: 20px;
+    appearance: none; /* Убираем стандартный стиль */
+}
+
+/* Стили для фона прогресс-бара (Webkit-браузеры: Chrome, Safari, Opera) */
+progress::-webkit-progress-bar {
+    background-color: #ccc; /* Цвет фона прогресс-бара */
+    border-radius: 10px; /* Закругленные углы */
+    overflow: hidden;
+}
+
+/* Стили для заполненной части прогресс-бара (Webkit-браузеры: Chrome, Safari, Opera) */
+progress::-webkit-progress-value {
+    background-color: rgba(0, 0, 255, .2); /* Цвет заполненной части прогресс-бара */
+    border-radius: 10px; /* Закругленные углы */
+}
+
+/* Стили для заполненной части прогресс-бара (Firefox) */
+progress::-moz-progress-bar {
+    background-color: rgba(0, 0, 255, .2); /* Цвет заполненной части прогресс-бара */
+    border-radius: 10px; /* Закругленные углы */
+}
