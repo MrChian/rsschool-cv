@@ -122,6 +122,16 @@ svg * {
     src: url('../fonts/Steppe-ExtraBold.ttf');
 }
 
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+}
+
+html {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
 body {
     background-color: #555963;
     font-family: 'Steppe-Book', sans-serif;
